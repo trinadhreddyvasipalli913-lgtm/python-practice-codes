@@ -1,0 +1,17 @@
+class bank:
+    def __init__(self):
+        self.balance=0
+    def deposite(self,amount):
+        self.balance+=amount
+    def withdraw(self,amount):
+        if amount <= self.balance:
+            self.balance-=amount
+        else:
+            print("insufficent balance,try again.")
+
+c=bank()
+c.deposite(2000)
+c.deposite(5000)
+c.deposite(4000)
+c.withdraw(1000)
+print("Balance: ",c.balance)
