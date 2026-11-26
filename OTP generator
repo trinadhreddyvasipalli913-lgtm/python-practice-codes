@@ -1,0 +1,4 @@
+import random
+import string
+OTP = "".join(random.choices(string.digits,k=5))
+print("Your OTP: ",OTP)
