@@ -1,0 +1,8 @@
+import random as r
+while True:
+    roll = input("Roll dice(yes/no)?: ")
+    if roll.lower() == "yes":
+        print("Dice: ",r.randint(1,6))
+    else:
+        print("Bye!")
+        break
