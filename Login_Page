@@ -1,0 +1,9 @@
+login_details = {"trinadh@123":"1234"}
+user_name = input("Enter the user_name: ")
+password = input("Enter a password: ")
+if login_details.get(user_name) == password:
+    print("Login successful.")
+elif user_name not in login_details:
+    print("Enter correct user_name!")
+else:
+    print("Enter correct password!")
