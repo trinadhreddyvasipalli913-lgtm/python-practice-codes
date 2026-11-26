@@ -1,0 +1,37 @@
+class bank:
+    def __init__(self):
+        self.balance=0
+        self.pin="1234"
+    def authenticate(self):
+        entered_pin = input("Enter the pin")
+        return entered_pin == self.pin
+    def deposite(self,amount):
+        if self.authenticate():
+            if amount > 0:
+                self.balance+=amount
+                print("Amount deposited succesfully.")
+            else:
+                print("Enter valid amount.")
+        else:
+            print("Enter correct pin.")
+    
+    def withdraw(self,amount):
+        if self.authenticate():
+            if amount < self.balance:
+                self.balance-=amount
+                print("Amount withdraw succesfully.")
+            else:
+                print("Enter valid amount")
+        else:
+            print("Enter correct pin.")
+    
+    def check_balance(self):
+        if self.authenticate():
+            print("Balance: ",self.balance)
+            
+c = bank()
+c.deposite(5000)
+c.deposite(5000)
+c.deposite(1000)
+c.withdraw(1000)
+c.check_balance()
